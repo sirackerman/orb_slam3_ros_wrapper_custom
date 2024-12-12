@@ -104,3 +104,13 @@ add_executable (${PROJECT_NAME}_rgbd
 target_link_libraries(${PROJECT_NAME}_rgbd
    ${LIBS}
 )
+
+#depth_viewer_node
+add_executable(${PROJECT_NAME}_depth_viewer
+    src/depth_viewer_node.cc
+)
+
+target_link_libraries(${PROJECT_NAME}_depth_viewer
+    ${catkin_LIBRARIES}
+    ${OpenCV_LIBS}
+)
